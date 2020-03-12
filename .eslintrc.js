@@ -21,6 +21,7 @@ module.exports = {
     'no-mixed-operators': 0,
     'import/no-extraneous-dependencies': 0,
     'no-param-reassign': 0,
+    'arrow-parens': ['error', 'as-needed'],
     'react/prefer-stateless-function': 'off',
     indent: [
       2,

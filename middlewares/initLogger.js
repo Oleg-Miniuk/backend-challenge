@@ -1,6 +1,6 @@
 const logger = require('morgan');
 
-const initLogger = (app) => {
+const initLogger = app => {
   app.use(logger('dev'));
 };
 

@@ -5,7 +5,7 @@ const router = express.Router();
 
 /* GET users listing. */
 router.get('/', async (req, res) => {
-  const data = await menuService.fetchData();
+  const data = await menuService.getMenu();
   res.send(data);
 });
 

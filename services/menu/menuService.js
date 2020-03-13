@@ -23,15 +23,12 @@ const service = {
   async prepareMenu() {
     const menuFromApi = await this.getMenuFromApi();
     const menuProducts = this.getFlatMenuProducts(menuFromApi);
-    const extendedMenu = this.extendMenuWithTitles(menuProducts, titlesData);
-    return extendedMenu;
+    return this.extendMenuWithTitles(menuProducts, titlesData);
   },
   async getMenu() {
     if (cacheUtils.getFromCache('menu')) {
-      console.log('cached');
       return cacheUtils.getFromCache('menu');
     }
-    console.log('cache now');
     const menu = await this.prepareMenu();
     cacheUtils.cashData('menu', menu);
     return menu;

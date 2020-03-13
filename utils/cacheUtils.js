@@ -3,17 +3,13 @@ const NodeCache = require('node-cache');
 const cacheUtils = {
   cacheInst: null,
   initCache() {
-    console.log('init cache');
     this.cacheInst = new NodeCache({
-      stdTTL: 30,
-      checkperiod: 45
+      stdTTL: 86400,
+      checkperiod: 86460
     });
   },
   getCache() {
-    if (this.cacheInst) {
-      console.log('already exist');
-    } else {
-      console.log('new cache inst');
+    if (!this.cacheInst) {
       this.initCache();
     }
   },

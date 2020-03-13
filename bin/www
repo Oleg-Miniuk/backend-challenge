@@ -79,3 +79,5 @@ function onError(error) {
 function onListening() {
   console.log(`server is on ${server.address().port}`);
 }
+
+module.exports = server;

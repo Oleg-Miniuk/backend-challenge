@@ -1,3 +1,14 @@
+# Oleg Miniuk, Developer Challenge results
+## Completed tasks:
+* challenge business task
+* unit-tests (mocha + chai)
+* containerized with Docker 
+
+## Possible improvements :
+* rewrite to Typescript
+* download to AWS (code pipeline is ready)
+* refactor project structure (depending on project/team requirements and codestyle)
+
 # PepperHQ Backend (Full Stack) Developer Challenge
 
 ## TL;DR

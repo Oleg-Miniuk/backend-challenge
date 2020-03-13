@@ -7,7 +7,8 @@ const {
   initLogger,
   initParsers,
   initRoutes,
-  allowCORS
+  allowCORS,
+  cacheControl
 } = require('./middlewares/index');
 
 initLogger(app);
@@ -15,5 +16,6 @@ initParsers(app);
 allowCORS(app);
 initRoutes(app);
 initErrorHandler(app);
+cacheControl(app);
 
 module.exports = app;

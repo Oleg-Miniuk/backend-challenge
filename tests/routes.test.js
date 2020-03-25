@@ -13,12 +13,8 @@ describe('external menu api', () => {
     chai.request('http://backend-challenge-pos.pepperhq.com')
       .get('/menu.json')
       .end((err, res) => {
-        expect([200, 304])
-          .include(res.status);
-        expect(res.body)
-          .to
-          .be
-          .an('object');
+        expect([200, 304]).include(res.status);
+        expect(res.body).to.be.an('object');
         done();
       });
   });
@@ -29,21 +25,9 @@ describe('/menu', () => {
     chai.request(server)
       .get('/menu')
       .end((err, res) => {
-        expect([200, 304])
-          .include(res.status);
-        expect(res.body)
-          .to
-          .be
-          .an('array');
+        expect([200, 304]).include(res.status);
+        expect(res.body).to.be.an('array');
         done();
       });
-  });
-});
-
-describe('fail test', () => {
-  it('should fail', () => {
-    expect(true)
-      .to
-      .equal(false);
   });
 });
